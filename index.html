@@ -7,21 +7,23 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
+      background: linear-gradient(to bottom, #041E42, #C8102E);
+      color: #fff;
       text-align: center;
       padding: 40px 20px;
     }
     h1 {
       font-size: 3rem;
       margin-bottom: 0.3em;
+      animation: fadeInDown 1s ease-in-out;
     }
     p {
       font-size: 1.2rem;
       margin-bottom: 2em;
+      animation: fadeInUp 1.2s ease-in-out;
     }
     .btn {
-      background: #d8232a;
+      background: #C8102E;
       color: white;
       padding: 15px 30px;
       border: none;
@@ -29,6 +31,7 @@
       font-size: 1.2rem;
       cursor: pointer;
       text-decoration: none;
+      animation: fadeIn 2s ease-in-out;
     }
     .goat {
       max-width: 300px;
@@ -37,20 +40,93 @@
     .tagline {
       font-style: italic;
       font-size: 1.1rem;
-      color: #444;
+      color: #fff;
+    }
+    .section {
+      margin-top: 3em;
+    }
+    .socials a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: underline;
+    }
+    #countdown {
+      font-size: 1.5rem;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
   <h1>OVI895</h1>
- <p class="tagline">If you Lovi it — you goal it 🐐</p>
+  <p class="tagline">If you Lovi it — you goal it 🐐</p>
   <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Hockey_puck_icon.png" alt="Puck" class="goat">
+
   <p>
     Ovi is chasing history.<br>
     $OVI895 is the meme coin that GOATed before the goal.
   </p>
+
   <a href="https://www.pinksale.finance/launchpad/bsc/0xC0494A099091CA376EB72FC851495cD8beFBbF62" class="btn" target="_blank">
     Buy $OVI895
   </a>
+
+  <div class="section">
+    <h2>About the Token</h2>
+    <p>
+      $OVI895 is a meme token inspired by Alexander Ovechkin’s legendary chase for 895 goals. 
+      Join the community of hockey and crypto fans riding with the GOAT.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Connect with Us</h2>
+    <div class="socials">
+      <a href="https://t.me/OVI895" target="_blank">Telegram</a>
+      <a href="https://twitter.com/OVI895" target="_blank">Twitter/X</a>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Presale Ends In</h2>
+    <div id="countdown">Loading countdown...</div>
+  </div>
+
+  <script>
+    // Countdown Timer to April 30, 2025 23:59:59 UTC
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("2025-04-30T23:59:59Z").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        countdown.innerHTML = "Presale ended.";
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+    };
+
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
