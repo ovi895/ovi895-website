@@ -1,132 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OVI895 — The GOAT Token</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #041E42, #C8102E);
-      color: #fff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.3em;
-      animation: fadeInDown 1s ease-in-out;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2em;
-      animation: fadeInUp 1.2s ease-in-out;
-    }
-    .btn {
-      background: #C8102E;
-      color: white;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 10px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      text-decoration: none;
-      animation: fadeIn 2s ease-in-out;
-    }
-    .goat {
-      max-width: 300px;
-      margin: 2em auto;
-    }
-    .tagline {
-      font-style: italic;
-      font-size: 1.1rem;
-      color: #fff;
-    }
-    .section {
-      margin-top: 3em;
-    }
-    .socials a {
-      color: #fff;
-      margin: 0 10px;
-      text-decoration: underline;
-    }
-    #countdown {
-      font-size: 1.5rem;
-      margin-top: 1em;
-      font-weight: bold;
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-  </style>
-</head>
-<body>
-  <h1>OVI895</h1>
-  <p class="tagline">If you Lovi it — you goal it 🐐</p>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Hockey_puck_icon.png" alt="Puck" class="goat">
-
-  <p>
-    Ovi is chasing history.<br>
-    $OVI895 is the meme coin that GOATed before the goal.
-  </p>
-
-  <a href="https://www.pinksale.finance/launchpad/bsc/0xC0494A099091CA376EB72FC851495cD8beFBbF62" class="btn" target="_blank">
-    Buy $OVI895
-  </a>
-
-  <div class="section">
-    <h2>About the Token</h2>
-    <p>
-      $OVI895 is a meme token inspired by Alexander Ovechkin’s legendary chase for 895 goals. 
-      Join the community of hockey and crypto fans riding with the GOAT.
-    </p>
-  </div>
-
-  <div class="section">
-    <h2>Connect with Us</h2>
-    <div class="socials">
-      <a href="https://t.me/OVI895" target="_blank">Telegram</a>
-      <a href="https://twitter.com/OVI895" target="_blank">Twitter/X</a>
-    </div>
-  </div>
-
-  <div class="section">
-    <h2>Presale Ends In</h2>
-    <div id="countdown">Loading countdown...</div>
-  </div>
-
-  <script>
-    // Countdown Timer to April 30, 2025 23:59:59 UTC
-    const countdown = document.getElementById("countdown");
-    const targetDate = new Date("2025-04-30T23:59:59Z").getTime();
-
-    const updateCountdown = () => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-
-      if (distance < 0) {
-        countdown.innerHTML = "Presale ended.";
-        return;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OVI895 COIN</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #990000, #001f3f);
+        font-family: 'Anton', sans-serif;
+        color: white;
+        text-align: center;
       }
+      .container {
+        padding: 40px 20px;
+      }
+      h1 {
+        font-size: 4em;
+        margin: 0.2em 0;
+      }
+      .slogan {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        font-style: italic;
+      }
+      .buy-btn {
+        background-color: red;
+        color: white;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 1em 0;
+      }
+      .section {
+        margin: 2em 0;
+        font-size: 1.1em;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .links a {
+        color: #00aced;
+        text-decoration: none;
+        margin: 0 10px;
+      }
+      .countdown {
+        font-size: 1.5em;
+        margin-top: 2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>OVI895 COIN</h1>
+      <div class="slogan">OVIE895 was SHORT, OVI895 COIN is for going LONG 🚀</div>
 
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      <img
+        src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW9vMW43dDZiYXkxOGFkZWd4bzJsdWw4czZ4b2drbHM0Z3NmY2RzeCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/zIgqaTUtE3xNm/giphy.gif"
+        alt="Ovi Goal Strike"
+        width="300"
+      />
 
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-    };
+      <div class="section">
+        <p>
+          Ovi is chasing history. <br />
+          $OVI895 is the meme coin that GOATed before the goal.
+        </p>
+        <button class="buy-btn">Buy $OVI895</button>
+      </div>
 
-    setInterval(updateCountdown, 1000);
-  </script>
-</body>
+      <div class="section">
+        <strong>About the Token</strong><br />
+        $OVI895 is a meme token inspired by Alexander Ovechkin's legendary chase
+        for 895 goals. Join the community of hockey and crypto fans riding with
+        the GOAT.
+      </div>
+
+      <div class="section links">
+        <strong>Connect with Us</strong><br />
+        <a href="https://t.me/OVIE895" target="_blank">Telegram</a>
+        <a href="https://x.com/OVI895_official" target="_blank">Twitter/X</a>
+      </div>
+
+      <div class="countdown">
+        Presale Launches Soon...<br />
+        ⏳ Stay tuned!
+      </div>
+    </div>
+  </body>
 </html>
